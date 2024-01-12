@@ -22,7 +22,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export default function Home() {
   const [showAddIncomeModal, setShowAddIncomeModal] = useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
-  
+
   const [balance, setBalance] = useState(0);
 
   const { expenses, income } = useContext(financeContext);
