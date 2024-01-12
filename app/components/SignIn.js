@@ -16,7 +16,7 @@ function SignIn() {
     <main className="container max-w-2xl px-6 mx-auto ">
       <h1 className={` lg:text-6xl  text-4xl text-center lg:whitespace-nowrap pt-6 ${signika.className}`}>BudgetMate </h1>
       <p className="text-center font-light text-slate-600 py-4">Empower Your Financial Journey: Smart Solutions for Personal and Business Budgeting</p>
-      <div className="flex flex-col overflow-hidden shadow-md shadow-slate-500 bg-slate-800 rounded-2xl">
+      <div className="flex flex-col items-center">
         <div className="h-52">
           <img
             className="object-cover w-full h-full"
