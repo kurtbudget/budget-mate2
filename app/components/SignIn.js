@@ -3,13 +3,15 @@ import React, { useContext } from "react";
 import { authContext } from "../lib/store/auth-context";
 import { Signika } from 'next/font/google';
 const signika = Signika({ subsets: ['latin'], weight: '700' })
-import { FcGoogle } from "react-icons/fc";
+import { FcAbout, FcGoogle } from "react-icons/fc";
 import Link from "next/link";
-import {  Divider, Text } from "@tremor/react";
-
+import {  Button, Dialog, DialogPanel, Divider, Icon, Metric, Text, Title } from "@tremor/react";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FaQuestion } from "react-icons/fa";
 function SignIn() {
   const { googleLoginHandler } = useContext(authContext);
-
+  const [isAbout, setIsAbout] = React.useState(false);
+  const [isFAQ, setIsFAQ] = React.useState(false);
   return (
     <main className="container max-w-2xl px-6 mx-auto ">
       <h1 className={` lg:text-6xl  text-4xl text-center lg:whitespace-nowrap pt-6 ${signika.className}`}>BudgetMate </h1>
@@ -35,6 +37,19 @@ function SignIn() {
           <Link href={"https://www.gmail.com"}>
           <p className="text-white text-sm">Don't have an account? Create now.</p>
           </Link>
+          <div className="flex items-center gap-4 justify-between w-lg mx-auto">
+          <div>
+            <Link href={'/about'}>
+              About
+            </Link>
+          </div>
+          <div>
+            <Link href={'/faq'}>
+            FAQ
+            </Link>
+          </div>
+            
+          </div>
           </div>
         </div>
       </div>
