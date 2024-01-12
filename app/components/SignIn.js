@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 
 import { authContext } from "../lib/store/auth-context";
-
+import { Signika } from 'next/font/google';
+const signika = Signika({ subsets: ['latin'], weight: '700' })
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import {  Divider, Text } from "@tremor/react";
@@ -10,8 +11,8 @@ function SignIn() {
   const { googleLoginHandler } = useContext(authContext);
 
   return (
-    <main className="container max-w-2xl px-6 mx-auto">
-      <h1 className=" text-4xl font-bold text-center whitespace-nowrap pt-6">Welcome To Budget Mate </h1>
+    <main className="container max-w-2xl px-6 mx-auto ">
+      <h1 className={` lg:text-6xl  text-4xl text-center lg:whitespace-nowrap pt-6 ${signika.className}`}>BudgetMate </h1>
       <p className="text-center font-light text-slate-600 py-4">Empower Your Financial Journey: Smart Solutions for Personal and Business Budgeting</p>
       <div className="flex flex-col overflow-hidden shadow-md shadow-slate-500 bg-slate-800 rounded-2xl">
         <div className="h-52">
@@ -30,7 +31,7 @@ function SignIn() {
           </button>
           <div className="flex flex-col items-center justify-center gap-2 w-full">
           <p className="text-white text-sm">Sign in with Google</p>
-          <Divider className="border border-t-[1px] border-b-0 border-l-0 border-r-0 border-white mx-auto max-w-[400px]"></Divider>
+          <Divider className="border border-t-[1px] border-b-0 border-l-0 border-r-0 border-white mx-auto max-w-[200px] py-0 my-0"></Divider>
           <Link href={"https://www.gmail.com"}>
           <p className="text-white text-sm">Don't have an account? Create now.</p>
           </Link>

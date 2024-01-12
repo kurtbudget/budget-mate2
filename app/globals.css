@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply relative text-white bg-slate-900;
+    @apply relative text-white bg-slate-900 ;
   }
 
   button {
