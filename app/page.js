@@ -63,7 +63,7 @@ export default function Home() {
       <main className="container max-w-2xl px-6 mx-auto">
         <section className="py-3">
           <div className="flex items-center gap-2  text-gray-400  hover:text-lime-400">
-          <FaWallet className="hover:text-lime-400duration-100 hover:scale-150 " />
+          <FaWallet className="hover:text-lime-400 duration-100 hover:scale-150 " />
           <small className="text-lg"> Balance</small>
           </div>
           <h2 className="text-4xl font-bold">{currencyFormatter(balance)}</h2>
